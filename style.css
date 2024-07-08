@@ -1,53 +1,5 @@
-.Productos {
-    position: relative;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 40px;
-    margin-bottom: 50px;
-    color: white;
-
-
-}
-
-.automotores {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 20PX;
-    filter: drop-shadow(1px 1px 5px #FCD34D);
-}
-
-.ventiladores {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 15PX;
-    filter: drop-shadow(1px 1px 5px #FCD34D);
-}
-
-.hidrojet {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 15PX;
-    filter: drop-shadow(1px 1px 5px #FCD34D);
-}
-
-.aspiradora {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    margin-top: 15PX;
-    filter: drop-shadow(1px 1px 5px #FCD34D);
+*{
+  box-sizing: border-box;
 }
 
 /* logo header */
@@ -221,7 +173,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 35vh; /* Reducido el tamaño del contenedor */
+      height: 45vh; /* Reducido el tamaño del contenedor */
      /* Rojo oscuro */
       position: relative;
       overflow: hidden;
@@ -301,5 +253,11 @@
     background-color: #fcf414;
     box-shadow: none;
     transform: translateY(4px);
+  }
+  .mjo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
   }
   
