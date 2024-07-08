@@ -225,6 +225,7 @@
      /* Rojo oscuro */
       position: relative;
       overflow: hidden;
+      margin-top: 68px;
   }
   
   .background {
