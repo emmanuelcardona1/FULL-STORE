@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FullStore</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="website icon" type="png" href="img/_8cb40017-251c-470d-a958-29f72198eee2-removebg-preview-removebg-preview.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+    </style>
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script> const defaultTheme = require('tailwindcss/defaultTheme');
+    module.exports = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+          },
+          colors: {
+            red: {
+              '50': '#ffebee',
+              '100': '#ffcdd2',
+              '200': '#ef9a9a',
+              '300': '#e57373',
+              '400': '#ef5350',
+              '500': '#f44336',
+              '600': '#e53935',
+              '700': '#d32f2f',
+              '800': '#c62828',
+              '900': '#b71c1c',
+              'accent-100': '#ff8a80',
+              'accent-200': '#ff5252',
+              'accent-400': '#ff1744',
+              'accent-700': '#d50000',
+            },
+            purple: {
+              50: '#f3e5f5',
+              100: '#e1bee7',
+              200: '#ce93d8',
+              300: '#ba68c8',
+              400: '#ab47bc',
+              500: '#9c27b0',
+              600: '#8e24aa',
+              700: '#7b1fa2',
+              800: '#6a1b9a',
+              900: '#4a148c',
+              'accent-100': '#ea80fc',
+              'accent-200': '#e040fb',
+              'accent-400': '#d500f9',
+              'accent-700': '#aa00ff',
+            },
+            'deep-purple': {
+              50: '#ede7f6',
+              100: '#d1c4e9',
+              200: '#b39ddb',
+              300: '#9575cd',
+              400: '#7e57c2',
+              500: '#673ab7',
+              600: '#5e35b1',
+              700: '#512da8',
+              800: '#4527a0',
+              900: '#311b92',
+              'accent-100': '#b388ff',
+              'accent-200': '#7c4dff',
+              'accent-400': '#651fff',
+              'accent-700': '#6200ea',
+            },
+            teal: {
+              50: '#e0f2f1',
+              100: '#b2dfdb',
+              200: '#80cbc4',
+              300: '#4db6ac',
+              400: '#26a69a',
+              500: '#009688',
+              600: '#00897b',
+              700: '#00796b',
+              800: '#00695c',
+              900: '#004d40',
+              'accent-100': '#a7ffeb',
+              'accent-200': '#64ffda',
+              'accent-400': '#1de9b6',
+              'accent-700': '#00bfa5',
+            },
+            indigo: {
+              50: '#e8eaf6',
+              100: '#c5cae9',
+              200: '#9fa8da',
+              300: '#7986cb',
+              400: '#5c6bc0',
+              500: '#3f51b5',
+              600: '#3949ab',
+              700: '#303f9f',
+              800: '#283593',
+              900: '#1a237e',
+              'accent-100': '#8c9eff',
+              'accent-200': '#536dfe',
+              'accent-400': '#3d5afe',
+              'accent-700': '#304ffe',
+            },
+            pink: {
+              50: '#fce4ec',
+              100: '#f8bbd0',
+              200: '#f48fb1',
+              300: '#f06292',
+              400: '#ec407a',
+              500: '#e91e63',
+              600: '#d81b60',
+              700: '#c2185b',
+              800: '#ad1457',
+              900: '#880e4f',
+              'accent-100': '#ff80ab',
+              'accent-200': '#ff4081',
+              'accent-400': '#f50057',
+              'accent-700': '#c51162',
+            },
+            blue: {
+              50: '#e3f2fd',
+              100: '#bbdefb',
+              200: '#90caf9',
+              300: '#64b5f6',
+              400: '#42a5f5',
+              500: '#2196f3',
+              600: '#1e88e5',
+              700: '#1976d2',
+              800: '#1565c0',
+              900: '#0d47a1',
+              'accent-100': '#82b1ff',
+              'accent-200': '#448aff',
+              'accent-400': '#2979ff',
+              'accent-700': '#2962ff',
+            },
+            'light-blue': {
+              50: '#e1f5fe',
+              100: '#b3e5fc',
+              200: '#81d4fa',
+              300: '#4fc3f7',
+              400: '#29b6f6',
+              500: '#03a9f4',
+              600: '#039be5',
+              700: '#0288d1',
+              800: '#0277bd',
+              900: '#01579b',
+              'accent-100': '#80d8ff',
+              'accent-200': '#40c4ff',
+              'accent-400': '#00b0ff',
+              'accent-700': '#0091ea',
+            },
+            cyan: {
+              50: '#e0f7fa',
+              100: '#b2ebf2',
+              200: '#80deea',
+              300: '#4dd0e1',
+              400: '#26c6da',
+              500: '#00bcd4',
+              600: '#00acc1',
+              700: '#0097a7',
+              800: '#00838f',
+              900: '#006064',
+              'accent-100': '#84ffff',
+              'accent-200': '#18ffff',
+              'accent-400': '#00e5ff',
+              'accent-700': '#00b8d4',
+            },
+            gray: {
+              50: '#fafafa',
+              100: '#f5f5f5',
+              200: '#eeeeee',
+              300: '#e0e0e0',
+              400: '#bdbdbd',
+              500: '#9e9e9e',
+              600: '#757575',
+              700: '#616161',
+              800: '#424242',
+              900: '#212121',
+            },
+            'blue-gray': {
+              50: '#eceff1',
+              100: '#cfd8dc',
+              200: '#b0bec5',
+              300: '#90a4ae',
+              400: '#78909c',
+              500: '#607d8b',
+              600: '#546e7a',
+              700: '#455a64',
+              800: '#37474f',
+              900: '#263238',
+            },
+            green: {
+              50: '#e8f5e9',
+              100: '#c8e6c9',
+              200: '#a5d6a7',
+              300: '#81c784',
+              400: '#66bb6a',
+              500: '#4caf50',
+              600: '#43a047',
+              700: '#388e3c',
+              800: '#2e7d32',
+              900: '#1b5e20',
+              'accent-100': '#b9f6ca',
+              'accent-200': '#69f0ae',
+              'accent-400': '#00e676',
+              'accent-700': '#00c853',
+            },
+            'light-green': {
+              50: '#f1f8e9',
+              100: '#dcedc8',
+              200: '#c5e1a5',
+              300: '#aed581',
+              400: '#9ccc65',
+              500: '#8bc34a',
+              600: '#7cb342',
+              700: '#689f38',
+              800: '#558b2f',
+              900: '#33691e',
+              'accent-100': '#ccff90',
+              'accent-200': '#b2ff59',
+              'accent-400': '#76ff03',
+              'accent-700': '#64dd17',
+            },
+            lime: {
+              50: '#f9fbe7',
+              100: '#f0f4c3',
+              200: '#e6ee9c',
+              300: '#dce775',
+              400: '#d4e157',
+              500: '#cddc39',
+              600: '#c0ca33',
+              700: '#afb42b',
+              800: '#9e9d24',
+              900: '#827717',
+              'accent-100': '#f4ff81',
+              'accent-200': '#eeff41',
+              'accent-400': '#c6ff00',
+              'accent-700': '#aeea00',
+            },
+            amber: {
+              50: '#fff8e1',
+              100: '#ffecb3',
+              200: '#ffe082',
+              300: '#ffd54f',
+              400: '#ffca28',
+              500: '#ffc107',
+              600: '#ffb300',
+              700: '#ffa000',
+              800: '#ff8f00',
+              900: '#ff6f00',
+              'accent-100': '#ffe57f',
+              'accent-200': '#ffd740',
+              'accent-400': '#ffc400',
+              'accent-700': '#ffab00',
+            },
+            yellow: {
+              50: '#fffde7',
+              100: '#fff9c4',
+              200: '#fff59d',
+              300: '#fff176',
+              400: '#ffee58',
+              500: '#ffeb3b',
+              600: '#fdd835',
+              700: '#fbc02d',
+              800: '#f9a825',
+              900: '#f57f17',
+              'accent-100': '#ffff8d',
+              'accent-200': '#ffff00',
+              'accent-400': '#ffea00',
+              'accent-700': '#ffd600',
+            },
+            orange: {
+              50: '#fff3e0',
+              100: '#ffe0b2',
+              200: '#ffcc80',
+              300: '#ffb74d',
+              400: '#ffa726',
+              500: '#ff9800',
+              600: '#fb8c00',
+              700: '#f57c00',
+              800: '#ef6c00',
+              900: '#e65100',
+              'accent-100': '#ffd180',
+              'accent-200': '#ffab40',
+              'accent-400': '#ff9100',
+              'accent-700': '#ff6d00',
+            },
+            'deep-orange': {
+              50: '#fbe9e7',
+              100: '#ffccbc',
+              200: '#ffab91',
+              300: '#ff8a65',
+              400: '#ff7043',
+              500: '#ff5722',
+              600: '#f4511e',
+              700: '#e64a19',
+              800: '#d84315',
+              900: '#bf360c',
+              'accent-100': '#ff9e80',
+              'accent-200': '#ff6e40',
+              'accent-400': '#ff3d00',
+              'accent-700': '#dd2c00',
+            },
+            brown: {
+              50: '#efebe9',
+              100: '#d7ccc8',
+              200: '#bcaaa4',
+              300: '#a1887f',
+              400: '#8d6e63',
+              500: '#795548',
+              600: '#6d4c41',
+              700: '#5d4037',
+              800: '#4e342e',
+              900: '#3e2723',
+            },
+          },
+          spacing: {
+            '7': '1.75rem',
+            '9': '2.25rem',
+            '28': '7rem',
+            '80': '20rem',
+            '96': '24rem',
+          },
+          height: {
+            '1/2': '50%',
+          },
+          scale: {
+            '30': '.3',
+          },
+          boxShadow: {
+            outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
+          },
+        },
+      },
+      variants: {
+        scale: ['responsive', 'hover', 'focus', 'group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        opacity: ['responsive', 'hover', 'focus', 'group-hover'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+      },
+      plugins: [],
+    };</script>
+
+
+
+</head>
+
+
+
+
+<body>
+  <header>
+    <div class="bg-red-600">
+      <div class="  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div class="relative flex items-center justify-between">
+          <a href="/" aria-label="Company" title="FULLLSTORE" class="inline-flex items-center">
+            <div class="logoheader">
+
+              <img src="" alt="">
+            </div>
+            <span class="ml-2 text-xl font-bold tracking-wide text-gray-100 ">FullStore</span>
+          </a>
+          <ul class="flex items-center hidden space-x-8 lg:flex">
+            <li><a href="/" aria-label="Our product" title="Our product"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">productos</a>
+            </li>
+            <li><a href="/" aria-label="Our product" title="Our product"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Contactos</a>
+            </li>
+            <li><a href="/" aria-label="Product pricing" title="Product pricing"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Ubicacion</a>
+            </li>
+            <li><a href="/" aria-label="About us" title="About us"
+                class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Formas
+                de pago</a></li>
+            <ul class="flex items-center hidden space-x-8 lg:flex">
+              <li>
+
+                <div class="card">
+                  <a href="#" class="socialContainer containerOne">
+                    <svg class="socialSvg instagramSvg" viewBox="0 0 16 16">
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                      </path>
+                    </svg>
+                  </a>
+
+
+
+                  <a href="#" class="social facebook"><svg height="1em" viewBox="0 0 320 512">
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                      </path>
+                    </svg></a>
+
+
+                  <a href="#" class="socialContainer containerFour">
+                    <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+                      <path
+                        d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                      </path>
+                    </svg>
+                  </a>
+                </div>
+
+
+                </a>
+              </li>
+            </ul>
+
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </header>
+  <header>
+    <nav class="nav" style="position: fixed; width: 100%; top: 0; z-index: 1000;">
+      <div class="bg-red-600">
+        <div class="  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+          <div class="relative flex items-center justify-between">
+            <a href="/" aria-label="Company" title="FULLLSTORE" class="inline-flex items-center">
+              <div class="logoheader">
+
+                <img src="" alt="">
+              </div>
+              <button class="comic-button">FullStore</button>
+
+            </a>
+            <ul class="flex items-center hidden space-x-8 lg:flex">
+              <li><a href="/" aria-label="Our product" title="PRODUCTOS"
+                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">productos</a>
+              </li>
+              <li><a href="/" aria-label="Our product" title="CONTACTOS"
+                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Contactos</a>
+              </li>
+              <li><a href="/" aria-label="Product pricing" title="UBICACION"
+                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Ubicacion</a>
+              </li>
+              <li><a href="/" aria-label="About us" title="FORMAS DE PAGO"
+                  class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400 uppercase">Formas
+                  de pago</a></li>
+              <ul class="flex items-center hidden space-x-8 lg:flex">
+                <li>
+
+                  <div class="card">
+                    <a href="#" class="socialContainer containerOne">
+                      <svg class="socialSvg instagramSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+                        </path>
+                      </svg>
+                    </a>
+
+
+
+                    <a href="#" class="social facebook"><svg height="1em" viewBox="0 0 320 512">
+                        <path
+                          d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                        </path>
+                      </svg></a>
+
+
+                    <a href="#" class="socialContainer containerFour">
+                      <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16">
+                        <path
+                          d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+                        </path>
+                      </svg>
+                    </a>
+                  </div>
+
+
+                  </a>
+                </li>
+              </ul>
+
+
+          </div>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+ 
+
+
+
+  <br>
+  <hr>
+  <!-- <main>
+    <div class="relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full bg-red-50 ">
+      <div class="max-w-xl mx-auto lg:max-w-screen-xl">
+        <div class="mb-16 lg:max-w-lg lg:mb-0">
+          <div class="max-w-xl mb-6">
+            <div>
+              <p
+                class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                BIENVENIDO
+              </p>
+            </div>
+            <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight  sm:text-4xl sm:leading-none text-base text-red-600
+
+        ">
+              Gracias por visitar<br class="hidden md:block   " />
+              FULL STORE
+
+            </h2>
+            <p class="text-base text-gray-700 md:text-lg">
+              En FullStore, nos especializamos en ofrecerte lo último en tecnología y productos electrónicos de alta
+              calidad. Nuestro objetivo es brindarte una experiencia de compra inigualable, con una amplia variedad de
+              artículos que satisfacen todas tus necesidades tecnológicas.
+
+            </p>
+          </div>
+          <div class="flex items-center">
+
+            <a href="/" aria-label=""
+              class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Conoce
+              mas </a>
+          </div>
+        </div>
+      </div> 
+     
+     <section> <div
+        class="flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end">
+        <img src=""
+          class="h-64 max-w-xl -mb-16 rounded shadow-2xl lg:ml-64 xl:ml-8 lg:-mb-24 xl:-mb-28 lg:h-auto lg:max-w-screen-md"
+          alt="" />
+        <div class="swiffy-slider">
+          <ul class="slider-container">
+            <li><img src="img/Imagen de WhatsApp 2024-07-05 a las 13.47.15_a83255f0.jpg"
+                style="max-width: 400px;height: 350px; margin-left: 15%; margin-bottom: 35px;"></li>
+            <li><img src="imgwhatsapp/Imagen de WhatsApp 2024-07-05 a las 13.47.55_3efcd9b8.jpg"
+                style="max-width: 400px; margin-left: 15%; margin-bottom: 35px; border-radius: 5%;"></li>
+            <li><img src="img/Imagen1-removebg-preview.png" style="max-width: 100%;height: auto;"></li>
+          </ul>
+
+          <button style="border-color: black;"  type="button" class="slider-nav "  > </button>
+          <button type="button" class="slider-nav slider-nav-next" ></button>
+
+          <div class="slider-indicators">
+            <button class="active" style="background-color: red;;"></button>
+            <button style="background-color: red;"></button>
+            <button style="background-color: red;"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main></section> -->
+ 
+
+  <div class="container">
+    <div class="background"></div>
+    <div class="content">
+        <div class="cart">
+            <img src="img/_8cb40017-251c-470d-a958-29f72198eee2-removebg-preview-removebg-preview.png" alt="Carrito de Compras">
+        </div>
+        <div class="welcome-text">
+           <strong> <h1>¡Bienvenido a nuestra tienda FULLSTORE en línea</h1>
+            <p class="animated-text">Encuentra todo lo que necesitas para tus compras en un solo lugar!</p></strong>
+        </div>
+    </div>
+</div>
+
+
+  <h3 > <p class="text-4xl font-black text-gray-900 flex justify-center uppercase margin-bottom 10px" style="font-size: 20px;">¡Las mejores ofertas al mejor precio! </p></h3>
+<section>
+
+  <div class="swiffy-slider slider-item-show3 slider-nav-round slider-nav-page">
+    <ul class="slider-container">
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="imgwhatsapp/Imagen de WhatsApp 2024-07-05 a las 13.48.28_f013b7b0.jpg" class="card-img-top" loading="lazy" alt="..." style="max-width: 300px; max-height: 300px;">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">LeBron 18</h3>
+                        <p class="px-2">$200</p>
+                    </div>
+                    <p class="card-text">Basketball Shoes</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="imgwhatsapp/ventiladores.jpg" class="card-img-top" loading="lazy" alt="..." style="max-width: 300px; max-height: 300px;">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">Nike Air Vapormax 2021 FK</h3>
+                        <p class="px-2">$200</p>
+                    </div>
+                    <p class="card-text">Women's Shoes</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="imgwhatsapp/Imagen de WhatsApp 2024-07-05 a las 13.47.55_3efcd9b8.jpg" class="card-img-top" loading="lazy" alt="..." style="max-width: 300px; max-height: 300px;">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">Nike Air Force 1 Fontanka</h3>
+                        <p class="px-2">$110</p>
+                    </div>
+                    <p class="card-text">Women's Shoes</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="imgwhatsapp/aspiradora.jpg" class="card-img-top" loading="lazy" alt="..." style="max-width: 300px; max-height: 300px;">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">Kyrie 7</h3>
+                        <p class="px-2">$130</p>
+                    </div>
+                    <p class="card-text">Basketball Shoes</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="img/Imagen de WhatsApp 2024-07-05 a las 13.47.15_a83255f0.jpg" class="card-img-top" loading="lazy" alt="... " style="max-width: 300px; max-height: 300px;" >
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">Kyrie 7</h3>
+                        <p class="px-2">$110</p>
+                    </div>
+                    <p class="card-text">Big Kids' Basketball Shoes</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card border-0">
+                <div class="ratio ratio-1x1">
+                    <img src="imgwhatsapp/hidro2.jpg"   class="card-img-top" loading="lazy" alt="..." style="max-width: 300px ; max-height: 300px;">
+                </div>
+                <div class="card-body p-0 pt-2">
+                    <div class="d-flex">
+                        <h3 class="flex-grow-1 h5">Nike Air Max 90 Premium</h3>
+                        <p class="px-2">$130</p>
+                    </div>
+                    <p class="card-text">Men's Shoes</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go left"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+</div>
+</section>
+  
+  <br>
+
+  <section>
+ 
+
+    
+   <h3> <p class="text-4xl font-black text-gray-900 flex justify-center uppercase">¡Las mejores categorias para ti! </p></h3>
+    
+
+
+    <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+      
+      
+      <button type="button"
+        class="text-red-900 border border- hover:border-gray-200 dark:border-gray-900 dark:bg-gray-50 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-red-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-gray-900 dark:focus:ring-red-500 uppercase">herramientas</button>
+        <button type="button"
+        class="text-red-900 border border- hover:border-gray-200 dark:border-gray-900 dark:bg-gray-50 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-red-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-gray-900 dark:focus:ring-red-500 uppercase">Ventiladores</button>
+        <button type="button"
+        class="text-red-900 border border- hover:border-gray-200 dark:border-gray-900 dark:bg-gray-50 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-red-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-gray-900 dark:focus:ring-red-500 uppercase">respuestos</button>
+        <button type="button"
+        class="text-red-900 border border- hover:border-gray-200 dark:border-gray-900 dark:bg-gray-50 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-red-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-gray-900 dark:focus:ring-red-500 uppercase">industriales</button>
+        <button type="button"
+        class="text-red-900 border border- hover:border-gray-200 dark:border-gray-900 dark:bg-gray-50 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-red-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-gray-900 dark:focus:ring-red-500 uppercase">¡mucho mas para ti! </button>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div>
+        <img class="h-auto max-w-full rounded-lg" src="imgwhatsapp/hidro.jpg"
+          alt=""  style="max-width: 500; max-height: 500px; margin-left: 4%;">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg"
+          src="imgwhatsapp/hidro.jpg" alt="" style="max-width: 500; max-height: 500px; ">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg"
+          src="imgwhatsapp/hidro2.jpg" alt="" style="max-width: 500; max-height: 500px;">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg"
+          src="imgwhatsapp/Imagen de WhatsApp 2024-07-05 a las 13.47.55_3efcd9b8.jpg" alt="" style="max-width: 500; max-height: 500px; margin-left: 4%;">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg"
+          src="imgwhatsapp/ventiladores.jpg" alt="" style="max-width: 500; max-height: 500px;">
+      </div>
+      <div>
+        <img class="h-auto max-w-full rounded-lg"
+          src="imgwhatsapp/Imagen de WhatsApp 2024-07-05 a las 13.48.28_f013b7b0.jpg" alt="" style="max-width: 500; max-height: 500px;">
+      </div>
+
+
+  </section>
+
+
+
+  <hr>
+
+  <section>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid grid-cols-2 row-gap-8 md:grid-cols-4">
+        <div class="text-center md:border-r">
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">144K</h6>
+          <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+            Downloads
+          </p>
+        </div>
+        <div class="text-center md:border-r">
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">12.9K</h6>
+          <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+            Subscribers
+          </p>
+        </div>
+        <div class="text-center md:border-r">
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">48.3K</h6>
+          <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+            Users
+          </p>
+        </div>
+        <div class="text-center">
+          <h6 class="text-4xl font-bold lg:text-5xl xl:text-6xl">24.5K</h6>
+          <p class="text-sm font-medium tracking-widest text-gray-800 uppercase lg:text-base">
+            Cookies
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <div class="swiffy-slider slider-item-show2 slider-item-reveal slider-nav-outside slider-nav-round slider-nav-visible slider-indicators-outside slider-indicators-round slider-indicators-dark slider-nav-animation slider-nav-animation-fadein slider-item-first-visible">
+      <ul class="slider-container py-4">
+          <li class="slide-visible">
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/Aspiradora-potente-sin-bolsa-Rowenta-Compact-Power-XXL-RO4B50-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body p-3 p-xl-5">
+                      <h3 class="card-title h5">See the world</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <div><a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                  </div>
+              </div>
+          </li>
+          <li class="slide-visible">
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/hidrolavadora-de-alta-presion-sk504-1800w100bar6ltmin-sukra-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body p-3 p-xl-5">
+                      <h3 class="card-title h5">Tranquil locations far away</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/Imagen1-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body p-3 p-xl-5">
+                      <h3 class="card-title h5">Road trip in the wilderness</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/hidrolavadora-de-alta-presion-sk504-1800w100bar6ltmin-sukra-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body  p-3 p-xl-5">
+                      <h3 class="card-title h5">To the hidden lake side</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/hidrolavadora-de-alta-presion-sk504-1800w100bar6ltmin-sukra-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body  p-3 p-xl-5">
+                      <h3 class="card-title h5">Up, up, up in the Air</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <div class="card shadow h-100">
+                  <div class="ratio ratio-16x9">
+                      <img src="img/Imagen_de_WhatsApp_2024-07-05_a_las_13.34.46_c565c5b5-removebg-preview.png" class="card-img-top" loading="lazy" alt="...">
+                  </div>
+                  <div class="card-body  p-3 p-xl-5">
+                      <h3 class="card-title h5">A climbers birds view</h3>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+              </div>
+          </li>
+      </ul>
+  
+      <button type="button" class="slider-nav" aria-label="Go left"></button>
+      <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+  
+      <div class="slider-indicators">
+          <button class="active" aria-label="Go to slide"></button>
+          <button aria-label="Go to slide"></button>
+          <button aria-label="Go to slide"></button>
+          <button aria-label="Go to slide"></button>
+          <button aria-label="Go to slide"></button>
+      </div>
+  </div>
+ 
+  </section>
+
+
+
+
+  <footer>
+    <div class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+      <div class="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="sm:col-span-2">
+          <a href="/" aria-label="Go home" title="FullStore" class="inline-flex items-center">
+            <div class="logo ">
+
+              <img src="img/_8cb40017-251c-470d-a958-29f72198eee2-removebg-preview.png" alt="">
+            </div>
+            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">FullStore</span>
+          </a>
+          <div class="mt-6 lg:max-w-sm">
+            <p class="text-sm text-gray-800">
+              *¡Gracias por visitar FullStore!*
+
+
+            </p>
+            <p class="mt-4 text-sm text-gray-800">
+              Explora lo último en tecnología con productos de alta calidad y precios competitivos. Disfruta de soporte
+              experto, envío rápido y garantía en todas tus compras.
+
+              ¡Regresa pronto para más ofertas y novedades!
+            </p>
+          </div>
+        </div>
+        <div class="space-y-2 text-sm">
+          <p class="text-base font-bold tracking-wide text-gray-900">Contacts</p>
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Phone:</p>
+            <a href="tel:850-123-5021" aria-label="Our phone" title="Our phone"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">850-123-5021</a>
+          </div>
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Email:</p>
+            <a href="mailto:info@lorem.mail" aria-label="Our email" title="Our email"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">info@lorem.mail</a>
+          </div>
+          <div class="flex">
+            <p class="mr-1 text-gray-800">Address:</p>
+            <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer" aria-label="Our address"
+              title="Our address"
+              class="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800">
+              312 Lovely Street, NY
+            </a>
+          </div>
+        </div>
+        <div>
+          <span class="text-base font-bold tracking-wide text-gray-900">Social</span>
+          <div class="flex items-center mt-1 space-x-3">
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M24,4.6c-0.9,0.4-1.8,0.7-2.8,0.8c1-0.6,1.8-1.6,2.2-2.7c-1,0.6-2,1-3.1,1.2c-0.9-1-2.2-1.6-3.6-1.6 c-2.7,0-4.9,2.2-4.9,4.9c0,0.4,0,0.8,0.1,1.1C7.7,8.1,4.1,6.1,1.7,3.1C1.2,3.9,1,4.7,1,5.6c0,1.7,0.9,3.2,2.2,4.1 C2.4,9.7,1.6,9.5,1,9.1c0,0,0,0,0,0.1c0,2.4,1.7,4.4,3.9,4.8c-0.4,0.1-0.8,0.2-1.3,0.2c-0.3,0-0.6,0-0.9-0.1c0.6,2,2.4,3.4,4.6,3.4 c-1.7,1.3-3.8,2.1-6.1,2.1c-0.4,0-0.8,0-1.2-0.1c2.2,1.4,4.8,2.2,7.5,2.2c9.1,0,14-7.5,14-14c0-0.2,0-0.4,0-0.6 C22.5,6.4,23.3,5.5,24,4.6z">
+                </path>
+              </svg>
+            </a>
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+              <svg viewBox="0 0 30 30" fill="currentColor" class="h-6">
+                <circle cx="15" cy="15" r="4"></circle>
+                <path
+                  d="M19.999,3h-10C6.14,3,3,6.141,3,10.001v10C3,23.86,6.141,27,10.001,27h10C23.86,27,27,23.859,27,19.999v-10   C27,6.14,23.859,3,19.999,3z M15,21c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S18.309,21,15,21z M22,9c-0.552,0-1-0.448-1-1   c0-0.552,0.448-1,1-1s1,0.448,1,1C23,8.552,22.552,9,22,9z">
+                </path>
+              </svg>
+            </a>
+            <a href="/" class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-400">
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-5">
+                <path
+                  d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <p class="mt-4 text-sm text-gray-500">
+            Bacon ipsum dolor amet short ribs pig sausage prosciutto chicken spare ribs salami.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col-reverse justify-between pt-5 pb-10 border-t lg:flex-row">
+        <p class="text-sm text-gray-600">
+          © Copyright 2020 Lorem Inc. All rights reserved.
+        </p>
+        <ul class="flex flex-col mb-3 space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+          <li>
+            <a href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">F.A.Q</a>
+          </li>
+          <li>
+            <a href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Privacy
+              Policy</a>
+          </li>
+          <li>
+            <a href="/"
+              class="text-sm text-gray-600 transition-colors duration-300 hover:text-deep-purple-accent-400">Terms &amp;
+              Conditions</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
