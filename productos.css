@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.sect1{
+    margin-top: 100px;
+    font-size: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.conten1 {
+    margin-top: 10px;
+    display: flex;  
+}
+.vent1{
+    display: flex;
+    margin: 5px 5px;
+}
+.vent2{
+    display: flex;
+    margin: 5px 5px;
+}
+.vent3{
+    display: flex;
+    margin: 5px 5px;
+}
+.vent4{
+    display: flex;
+    margin: 5px 5px;
+}
