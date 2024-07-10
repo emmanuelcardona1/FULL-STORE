@@ -11,11 +11,16 @@
     font-size: 80px;
     display: flex;
     justify-content: center;
+    position: relative;
+     text-align: center;
+     font-family: "Fjalla One", sans-serif;
 }
 
 .conten1 {
     margin-top: 10px;
-    display: flex;  
+    display: flex; 
+    position: relative;
+    text-align: center; 
 }
 .vent1{
     display: flex;
